@@ -65,7 +65,7 @@ body {
 .sidepanel .smenu {
   text-decoration: none;
   transition: 0.3s;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.897);
   font-family: var(--Nunito);
   font-size: 3rem;
   font-weight: 800;
@@ -81,6 +81,31 @@ body {
   justify-content: center;
   align-items: flex-end;
   padding: 0px;
+}
+
+.smenu:hover {
+  padding-right: 9rem;
+  color: #fff;
+  padding-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.smenu::before {
+  content: "";
+  position: relative; 
+  display: block;
+  width: 100%;
+  height: 8px;
+  top: 10;
+  left: 0;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.smenu:hover::before {
+  transform: scaleX(1);
+  
 }
 
 /* Position and style the close button (top right corner) */
